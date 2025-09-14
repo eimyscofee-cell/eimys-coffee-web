@@ -1,0 +1,208 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.App-logo {
+  height: 120px; /* Logo más grande */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%; /* Padding ajustado para un look más limpio */
+  /* La imagen de fondo se aplica desde el componente Navbar.js */
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid #ddd;
+  position: relative; /* Necesario para el overlay */
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #f4f4f4; /* Texto claro para contraste sobre la imagen */
+  font-size: 1.3rem; /* Aumento ligero para legibilidad */
+  font-family: 'Segoe Script', 'Brush Script MT', cursive;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra más fuerte para mejorar legibilidad */
+}
+
+/* Overlay para el banner superior */
+nav::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Overlay más oscuro para mejorar legibilidad */
+  z-index: 0;
+}
+
+/* Asegura que el logo y los links estén sobre el overlay */
+nav > .App-logo, nav > .nav-links {
+  position: relative;
+  z-index: 1;
+}
+
+.hero {
+  background-image: url('https://via.placeholder.com/1500x600.png?text=Coffee+Plantation'); /* Placeholder for coffee plantation image */
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero .btn {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #8B4513; /* SaddleBrown */
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.main-content {
+  flex: 1; /* Permite que el contenido principal crezca y ocupe el espacio disponible */
+}
+
+/* Estilos para el Footer como un banner */
+.main-footer {
+  /* La imagen de fondo se aplica desde el componente Footer.js, por lo que se elimina la regla de aquí */
+  background-size: cover;
+  background-position: center;
+  color: #f4f4f4; /* Texto claro para contraste sobre la imagen */
+  padding: 1rem 5%; /* Padding reducido para hacerlo más angosto */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Para que se ajuste en pantallas pequeñas */
+  gap: 1.5rem; /* Espacio entre elementos si se envuelven */
+  font-family: 'Segoe Script', 'Brush Script MT', cursive;
+  position: relative; /* Necesario para el overlay */
+}
+
+/* Overlay oscuro para mejorar la legibilidad del texto sobre la imagen */
+.main-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+.footer-item {
+  font-size: 0.9rem;
+  position: relative; /* Para que el contenido se muestre sobre el overlay */
+  z-index: 1;
+}
+
+.footer-copyright {
+  /* Asegura que el copyright se mantenga centrado si el espacio lo permite */
+  flex-grow: 1;
+  text-align: center;
+}
+
+.main-footer a {
+  color: #f4f4f4; /* Texto claro para contraste */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.main-footer a:hover {
+  text-decoration: underline;
+}
+
+.instagram-icon {
+  width: 28px; /* Tamaño del ícono */
+  height: 28px;
+  stroke: #f4f4f4; /* Color del ícono claro para contraste */
+  vertical-align: middle; /* Alineación vertical */
+  transition: transform 0.2s ease-in-out;
+}
+
+.main-footer a:hover .instagram-icon {
+  transform: scale(1.1); /* Efecto de hover */
+}
+
+/* Estilos para las páginas de contenido como Tienda y Aprende */
+.page-container {
+  padding: 2rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #3b2f2f;
+}
+
+/* Estilos para listas de tarjetas (Tienda y Aprende) */
+.product-list,
+.article-list {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.product-card,
+.article-preview {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: 300px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.product-card h3,
+.article-preview h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #333;
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+
+.product-card p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #8b4513; /* SaddleBrown */
+  margin-bottom: 1.5rem;
+}
+
+.product-card .btn,
+.article-preview .btn {
+  align-self: flex-start;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
