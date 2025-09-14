@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/eimys-coffee-web/static/css/main.01df045d.css",
-    "main.js": "/eimys-coffee-web/static/js/main.64364a67.js",
+    "main.js": "/eimys-coffee-web/static/js/main.10cd5172.js",
     "static/media/logo.jpeg": "/eimys-coffee-web/static/media/logo.df460eb1c4b5a941aad3.jpeg",
     "static/media/cafe.jpg": "/eimys-coffee-web/static/media/cafe.5c14d90aa13b67c4123a.jpg",
     "index.html": "/eimys-coffee-web/index.html",
     "main.01df045d.css.map": "/eimys-coffee-web/static/css/main.01df045d.css.map",
-    "main.64364a67.js.map": "/eimys-coffee-web/static/js/main.64364a67.js.map"
+    "main.10cd5172.js.map": "/eimys-coffee-web/static/js/main.10cd5172.js.map"
   },
   "entrypoints": [
     "static/css/main.01df045d.css",
-    "static/js/main.64364a67.js"
+    "static/js/main.10cd5172.js"
   ]
 }
