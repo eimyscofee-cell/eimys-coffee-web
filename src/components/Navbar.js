@@ -22,6 +22,9 @@ function Navbar() {
           <Link to="/aprende">Aprende</Link>
         </li>
         <li>
+          <Link to="/nosotros">Nosotros</Link>
+        </li>
+        <li>
           <Link to="/tienda">Tienda</Link>
         </li>
         <li>

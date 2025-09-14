@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Inicio from "./components/Inicio";
 import Aprende from "./components/Aprende";
 import Tienda from "./components/Tienda";
+import Nosotros from "./components/Nosotros";
 import Carrito from "./components/Carrito";
 import Footer from "./components/Footer";
 
@@ -16,6 +17,7 @@ function App() {
         <main className="main-content">
           <Routes>
             <Route path="/aprende" element={<Aprende />} />
+            <Route path="/nosotros" element={<Nosotros />} />
             <Route path="/tienda" element={<Tienda />} />
             <Route path="/carrito" element={<Carrito />} />
             <Route path="/" element={<Inicio />} />
